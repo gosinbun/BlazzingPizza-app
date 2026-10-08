@@ -48,7 +48,7 @@
   
     <div class="order-total @(order.Pizzas.Any() ? "" : "hidden")" style="margin-top: auto;">
         Total:
-        <span class="total-price">£@order.GetFormattedTotalPrice()</span>
+        <span class="total-price">@order.GetFormattedTotalPrice()</span>
         <a href="checkout" class="@(OrderState.Order.Pizzas.Count == 0 ? "btn btn-warning disabled" : "btn btn-warning")">
             Order >
         </a>
